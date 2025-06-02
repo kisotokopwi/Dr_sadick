@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useLanguage } from "../contexts/LanguageContext"
 import { ArrowRight, MessageCircle } from "lucide-react"
+import { motion } from "framer-motion"
 import WhatsAppModal from "./WhatsAppModal"
 
 export default function HeroSection() {
@@ -13,47 +14,109 @@ export default function HeroSection() {
       {/* Solid background for maximum contrast */}
       <div className="absolute inset-0 bg-navy"></div>
 
+      {/* Animated dots background - NEW IMPLEMENTATION */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(15)].map((_, i) => (
+          <motion.div
+            key={`hero-dot-${i}`}
+            className="absolute w-2 h-2 bg-gold rounded-full"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              x: [0, Math.random() * 200 - 100, 0],
+              y: [0, Math.random() * 200 - 100, 0],
+              opacity: [0.2, 0.8, 0.2],
+              scale: [0.5, 1.5, 0.5],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 4,
+              repeat: Number.POSITIVE_INFINITY,
+              delay: i * 0.3,
+              ease: "easeInOut",
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+
+        {/* Additional sparkle effects */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={`hero-sparkle-${i}`}
+            className="absolute w-1 h-1 bg-white rounded-full"
+            animate={{
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Number.POSITIVE_INFINITY,
+              delay: i * 0.8,
+            }}
+            style={{
+              left: `${20 + i * 10}%`,
+              top: `${30 + i * 5}%`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-white space-y-8 relative z-20">
             {/* Solid background container for text */}
-            <div className="bg-navy border-l-4 border-gold p-6 rounded-lg shadow-2xl">
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
+            <div className="bg-navy/90 backdrop-blur-sm border-l-4 border-gold p-8 rounded-2xl shadow-2xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white"
                 style={{
-                  color: "white",
-                  WebkitTextStroke: "1px rgba(255,255,255,0.2)",
+                  textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
                 }}
               >
                 {t("heroTitle")}
-              </h1>
+              </motion.h1>
 
-              <h2
-                className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gold mb-6"
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-xl md:text-2xl lg:text-3xl font-bold text-gold mb-8"
                 style={{
-                  color: "#f9a825",
-                  WebkitTextStroke: "0.5px rgba(0,0,0,0.3)",
+                  textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
                 }}
               >
                 {t("heroSubtitle")}
-              </h2>
+              </motion.h2>
 
-              <button
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsModalOpen(true)}
                 className="bg-gold hover:bg-gold/90 text-navy font-extrabold py-5 px-10 rounded-xl text-xl transition-all duration-300 shadow-2xl hover:shadow-gold/50 flex items-center space-x-3 border-2 border-gold/50"
               >
                 <MessageCircle className="w-7 h-7" />
                 <span>{t("joinNow")}</span>
                 <ArrowRight className="w-7 h-7 ml-2" />
-              </button>
+              </motion.button>
             </div>
           </div>
 
           {/* Mr. Sadick Image */}
-          <div className="relative mt-8 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative mt-8 lg:mt-0"
+          >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold to-navy rounded-2xl transform rotate-3 opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gold to-emerald rounded-2xl transform rotate-3 opacity-30"></div>
               <img
                 src="/images/dr-sadick-formal.jpeg"
                 alt="Mr. Sadick"
@@ -64,7 +127,7 @@ export default function HeroSection() {
                 <span className="text-navy font-bold text-sm">Mr. Sadick</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { useLanguage } from "../contexts/LanguageContext"
+import { Globe } from "lucide-react"
 
 export default function Header() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false)
@@ -20,13 +21,16 @@ export default function Header() {
             BF Suma
           </motion.div>
 
-          {/* Language Toggle - Just emoji */}
+          {/* Language Toggle - With world emoji and current flag */}
           <div className="relative">
             <button
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="flex items-center space-x-2 p-3 rounded-full hover:bg-navy/10 transition-all duration-300"
             >
-              <span className="text-lg">{language === "sw" ? "🇹🇿" : "🇬🇧"}</span>
+              <div className="flex items-center">
+                <Globe className="w-5 h-5 text-navy" />
+                <span className="text-lg ml-1">{language === "sw" ? "🇹🇿" : "🇬🇧"}</span>
+              </div>
             </button>
 
             {/* Language Dropdown */}
