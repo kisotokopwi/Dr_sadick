@@ -10,18 +10,18 @@ export default function DrSadickGallery() {
   const images = [
     {
       src: "/images/dr-sadick-formal.jpeg",
-      alt: "Dr. Sadick - Professional Portrait",
-      caption: "Dr. Sadick in Professional Attire",
+      alt: "Mr. Sadick - Professional Portrait",
+      caption: "Mr. Sadick in Professional Attire",
     },
     {
       src: "/images/dr-sadick-casual.jpeg",
-      alt: "Dr. Sadick - Casual Look",
-      caption: "Dr. Sadick - Graduate with Plan B in Mind",
+      alt: "Mr. Sadick - Casual Look",
+      caption: "Mr. Sadick - Graduate with Plan B in Mind",
     },
     {
       src: "/images/dr-sadick-professional.jpeg",
-      alt: "Dr. Sadick - Business Professional",
-      caption: "Dr. Sadick - Business Leader",
+      alt: "Mr. Sadick - Business Professional",
+      caption: "Mr. Sadick - Business Leader",
     },
   ]
 
@@ -43,7 +43,7 @@ export default function DrSadickGallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6">Meet Dr. Sadick</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6">Meet Mr. Sadick</h2>
           <p className="text-lg text-navy/70 max-w-2xl mx-auto">
             Your mentor and guide to financial success through BF Suma
           </p>

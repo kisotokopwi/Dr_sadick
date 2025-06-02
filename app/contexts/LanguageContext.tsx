@@ -20,7 +20,7 @@ const translations = {
     joinNow: "Jiunge Sasa",
 
     // Video Section
-    videoTitle: "Tazama Video ya Dr. Sadick Akielezea Fursa ya BF Suma",
+    videoTitle: "Tazama Video ya Mr. Sadick Akielezea Fursa ya BF Suma",
     videoDescription: "Jifunze jinsi unavyoweza kubadilisha maisha yako kupitia biashara hii ya BF Suma",
 
     // About Section
@@ -30,7 +30,7 @@ const translations = {
     discountedPricing: "Ununuzi wa bidhaa kwa bei ya punguzo",
     commissionIncome: "Kipato kutokana na kamisheni",
     partTimeStart: "Unaweza kuanza kwa muda wa ziada",
-    comprehensiveTraining: "Mafunzo ya kina kutoka kwa Dr. Sadick",
+    comprehensiveTraining: "Mafunzo ya kina kutoka kwa Mr. Sadick",
 
     // Why Join
     whyJoinTitle: "Kwa Nini Ujiunge Nasi?",
@@ -42,11 +42,11 @@ const translations = {
     // Testimonials
     testimonialsTitle: "Hadithi za Mafanikio",
 
-    // About Dr. Sadick
-    aboutDrSadickTitle: "Kuhusu Dr. Sadick",
+    // About Mr. Sadick
+    aboutDrSadickTitle: "Kuhusu Mr. Sadick",
     aboutDrSadickDescription:
-      "Dr. Sadick ni kiongozi maarufu katika sekta ya biashara za mlolongo. Ana uzoefu wa miaka mingi na amewasaidia watu wengi kufikia malengo yao ya kifedha. Ni daktari mzuri na mwongozi wa biashara aliyefanikiwa.",
-    learnFromDrSadick: "Jifunze Kutoka Kwa Dr. Sadick",
+      "Mr. Sadick ni kiongozi maarufu katika sekta ya biashara za mlolongo. Ana uzoefu wa miaka mingi na amewasaidia watu wengi kufikia malengo yao ya kifedha. Ni mtaalamu mzuri na mwongozi wa biashara aliyefanikiwa.",
+    learnFromDrSadick: "Jifunze Kutoka Kwa Mr. Sadick",
 
     // CTA
     ctaTitle: "Usikose Fursa Hii – Bonyeza Hapa Uanze Safari Yako Ya Mafanikio",
@@ -78,7 +78,7 @@ const translations = {
     joinNow: "Join Now",
 
     // Video Section
-    videoTitle: "Watch Dr. Sadick Explain The BF Suma Opportunity",
+    videoTitle: "Watch Mr. Sadick Explain The BF Suma Opportunity",
     videoDescription: "Learn how you can transform your life through this BF Suma business",
 
     // About Section
@@ -88,7 +88,7 @@ const translations = {
     discountedPricing: "Purchase products at discounted prices",
     commissionIncome: "Income from commissions",
     partTimeStart: "You can start part-time",
-    comprehensiveTraining: "Comprehensive training from Dr. Sadick",
+    comprehensiveTraining: "Comprehensive training from Mr. Sadick",
 
     // Why Join
     whyJoinTitle: "Why Join Us?",
@@ -100,11 +100,11 @@ const translations = {
     // Testimonials
     testimonialsTitle: "Success Stories",
 
-    // About Dr. Sadick
-    aboutDrSadickTitle: "About Dr. Sadick",
+    // About Mr. Sadick
+    aboutDrSadickTitle: "About Mr. Sadick",
     aboutDrSadickDescription:
-      "Dr. Sadick is a renowned leader in the network marketing industry. He has years of experience and has helped many people achieve their financial goals. He is a qualified doctor and successful business leader.",
-    learnFromDrSadick: "Learn From Dr. Sadick",
+      "Mr. Sadick is a renowned leader in the network marketing industry. He has years of experience and has helped many people achieve their financial goals. He is a qualified professional and successful business leader.",
+    learnFromDrSadick: "Learn From Mr. Sadick",
 
     // CTA
     ctaTitle: "Don't Miss This Opportunity – Click Here To Start Your Success Journey",

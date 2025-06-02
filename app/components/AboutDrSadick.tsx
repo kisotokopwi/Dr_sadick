@@ -46,14 +46,14 @@ export default function AboutDrSadick() {
               <div className="absolute inset-0 bg-gradient-to-br from-gold to-emerald rounded-2xl transform rotate-3 opacity-20"></div>
               <img
                 src="/images/dr-sadick-professional.jpeg"
-                alt="Dr. Sadick"
+                alt="Mr. Sadick"
                 className="relative w-full h-auto rounded-2xl shadow-2xl border-4 border-gold/30"
               />
               {/* Professional badge */}
               <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg">
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-gold fill-current" />
-                  <span className="text-navy font-bold text-sm">Dr. Sadick</span>
+                  <span className="text-navy font-bold text-sm">Mr. Sadick</span>
                 </div>
               </div>
             </div>
@@ -66,9 +66,13 @@ export default function AboutDrSadick() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-navy">{t("aboutDrSadickTitle")}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-navy">About Mr. Sadick</h2>
 
-            <p className="text-lg text-navy/70 leading-relaxed">{t("aboutDrSadickDescription")}</p>
+            <p className="text-lg text-navy/70 leading-relaxed">
+              Mr. Sadick is a renowned leader in the network marketing industry. He has years of experience and has
+              helped many people achieve their financial goals. He is a qualified professional and successful business
+              leader.
+            </p>
 
             <div className="grid grid-cols-3 gap-4 py-6">
               {stats.map((stat, index) => (
@@ -96,7 +100,7 @@ export default function AboutDrSadick() {
               whileTap={{ scale: 0.95 }}
               className="bg-navy hover:bg-navy/90 text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              {t("learnFromDrSadick")}
+              Learn From Mr. Sadick
             </motion.button>
           </motion.div>
         </div>

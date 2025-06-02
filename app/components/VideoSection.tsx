@@ -17,7 +17,6 @@ export default function VideoSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6">{t("videoTitle")}</h2>
-          <p className="text-lg text-navy/70 max-w-2xl mx-auto">{t("videoDescription")}</p>
         </motion.div>
 
         <motion.div
@@ -25,14 +24,14 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto" // Increased from max-w-4xl to max-w-5xl
         >
           <div className="relative bg-gradient-to-br from-navy to-emerald rounded-2xl p-8 shadow-2xl">
             <div className="relative aspect-video bg-black rounded-2xl overflow-hidden group cursor-pointer">
               {/* Real YouTube Video Embed */}
               <iframe
                 src="https://www.youtube.com/embed/81e6HMGx9rM"
-                title="Dr. Sadick - BIASHARA INAVYOLIPA SANA"
+                title="Mr. Sadick - BIASHARA INAVYOLIPA SANA"
                 className="w-full h-full"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -41,7 +40,7 @@ export default function VideoSection() {
             </div>
 
             <div className="mt-6 text-center">
-              <h3 className="text-xl font-semibold text-white mb-2">Dr. Sadick - BIASHARA INAVYOLIPA SANA</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Mr. Sadick - BIASHARA INAVYOLIPA SANA</h3>
               <p className="text-white/80">Discover the opportunity that's changing lives across Tanzania</p>
             </div>
           </div>

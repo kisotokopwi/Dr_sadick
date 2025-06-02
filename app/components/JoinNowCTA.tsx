@@ -1,15 +1,14 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { useLanguage } from "../contexts/LanguageContext"
 import { MessageCircle, ArrowRight, Sparkles, Users } from "lucide-react"
+import WhatsAppModal from "./WhatsAppModal"
 
 export default function JoinNowCTA() {
   const { t } = useLanguage()
-
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/255714695406?text=Hujambo, nataka kujua zaidi kuhusu fursa ya BF Suma", "_blank")
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <section className="py-20 bg-gradient-to-br from-navy via-navy/95 to-emerald relative overflow-hidden">
@@ -76,7 +75,7 @@ export default function JoinNowCTA() {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={handleWhatsAppClick}
+            onClick={() => setIsModalOpen(true)}
             className="group bg-gold hover:bg-gold/90 text-navy font-bold py-6 px-12 rounded-2xl text-xl transition-all duration-300 shadow-2xl hover:shadow-gold/50 flex items-center space-x-4 mx-auto animate-pulse hover:animate-none"
           >
             <MessageCircle className="w-8 h-8" />
@@ -96,6 +95,9 @@ export default function JoinNowCTA() {
           </motion.p>
         </motion.div>
       </div>
+
+      {/* WhatsApp Modal */}
+      <WhatsAppModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   )
 }
