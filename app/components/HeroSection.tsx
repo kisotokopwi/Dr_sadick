@@ -10,11 +10,11 @@ export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy pt-16">
-      {/* Solid background for maximum contrast */}
-      <div className="absolute inset-0 bg-navy"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* Gradient background - similar to CTA section */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-emerald"></div>
 
-      {/* Animated dots background - NEW IMPLEMENTATION */}
+      {/* Animated dots background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(15)].map((_, i) => (
           <motion.div
