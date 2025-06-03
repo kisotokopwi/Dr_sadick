@@ -83,7 +83,7 @@ export default function VideoTestimonialsSection() {
       name: "Fatuma Hassan",
       location: "Dodoma",
       thumbnail: "/biashara1.png?height=400&width=600&text=Business+Success+Story",
-      videoUrl: "/videos/testimonials/biashara-success-1.mp4",
+      videoUrl: "/videos/testimonials/biashara5.mp4",
       title: language === "sw" ? "Biashara Inayofaa" : "Profitable Business",
       comment:
         language === "sw"
@@ -96,7 +96,7 @@ export default function VideoTestimonialsSection() {
       name: "Mohamed Salim",
       location: "Moshi",
       thumbnail: "/biashara3.png?height=400&width=600&text=Daily+Sales+Success",
-      videoUrl: "/videos/testimonials/biashara-success-2.mp4",
+      videoUrl: "/videos/testimonials/biashara6.mp4",
       title: language === "sw" ? "Mauzo ya Kila Siku" : "Daily Sales Success",
       comment:
         language === "sw"
