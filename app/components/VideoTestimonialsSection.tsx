@@ -28,8 +28,8 @@ export default function VideoTestimonialsSection() {
       id: "safari-1",
       name: "Mariam Juma",
       location: "Mwanza",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Dubai+Safari+Winner",
-      videoUrl: "/videos/testimonials/safari-dubai.mp4",
+      thumbnail: "/safari1.png?height=400&width=600&text=Dubai+Safari+Winner",
+      videoUrl: "/videos/testimonials/SafariParachute.mp4",
       title: language === "sw" ? "Safari ya Dubai" : "Dubai Trip Winner",
       comment:
         language === "sw"
@@ -39,11 +39,11 @@ export default function VideoTestimonialsSection() {
     },
     {
       id: "safari-2",
-      name: "Hassan Mwalimu",
+      name: "Dr.Ibrahim Chenza",
       location: "Dar es Salaam",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Turkey+Safari+Winner",
-      videoUrl: "/videos/testimonials/safari-turkey.mp4",
-      title: language === "sw" ? "Safari ya Turkey" : "Turkey Trip Winner",
+      thumbnail: "/images/testimonials/drChenza.jpeg",
+      videoUrl: "/videos/testimonials/SafariSingapore.mp4",
+      title: language === "sw" ? "Safari ya Singapore" : "Singapore Trip Winner",
       comment:
         language === "sw"
           ? "Turkey ilikuwa ndoto yangu tangu utotoni. BF Suma ilinifanya ndoto yangu ikuwa ukweli. Familia yangu na mimi tulisafiri kwa mara ya kwanza nje ya Afrika!"
@@ -55,8 +55,8 @@ export default function VideoTestimonialsSection() {
       id: "gari-1",
       name: "Abdul Ramadhani",
       location: "Arusha",
-      thumbnail: "/images/testimonials/car-winner-thumbnail.jpeg",
-      videoUrl: "/videos/testimonials/gari-winner-1.mp4",
+      thumbnail: "/images/testimonials/carWinnerthumbnail1.jpeg",
+      videoUrl: "/videos/testimonials/magariWinner1.mp4",
       title: language === "sw" ? "Nilipata Gari Langu" : "I Got My Car",
       comment:
         language === "sw"
@@ -68,8 +68,8 @@ export default function VideoTestimonialsSection() {
       id: "gari-2",
       name: "Neema Ally",
       location: "Mbeya",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Second+Car+Winner",
-      videoUrl: "/videos/testimonials/gari-winner-2.mp4",
+      thumbnail: "/images/testimonials/carWinnerthumbnail2.jpeg",
+      videoUrl: "/videos/testimonials/magariWinner1.mp4",
       title: language === "sw" ? "Gari la Pili" : "Second Car Winner",
       comment:
         language === "sw"
@@ -82,7 +82,7 @@ export default function VideoTestimonialsSection() {
       id: "biashara-1",
       name: "Fatuma Hassan",
       location: "Dodoma",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Business+Success+Story",
+      thumbnail: "/biashara1.png?height=400&width=600&text=Business+Success+Story",
       videoUrl: "/videos/testimonials/biashara-success-1.mp4",
       title: language === "sw" ? "Biashara Inayofaa" : "Profitable Business",
       comment:
@@ -95,7 +95,7 @@ export default function VideoTestimonialsSection() {
       id: "biashara-2",
       name: "Mohamed Salim",
       location: "Moshi",
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Daily+Sales+Success",
+      thumbnail: "/biashara3.png?height=400&width=600&text=Daily+Sales+Success",
       videoUrl: "/videos/testimonials/biashara-success-2.mp4",
       title: language === "sw" ? "Mauzo ya Kila Siku" : "Daily Sales Success",
       comment:
