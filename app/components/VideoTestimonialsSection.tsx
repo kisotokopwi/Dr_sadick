@@ -26,15 +26,15 @@ export default function VideoTestimonialsSection() {
     // SAFARI Category
     {
       id: "safari-1",
-      name: "Mariam Juma",
+      name: "Jacob Juma",
       location: "Mwanza",
       thumbnail: "/safari1.png?height=400&width=600&text=Dubai+Safari+Winner",
       videoUrl: "/videos/testimonials/SafariParachute.mp4",
       title: language === "sw" ? "Safari ya Dubai" : "Dubai Trip Winner",
       comment:
         language === "sw"
-          ? "Niliuza bidhaa za BF Suma kwa miezi mitatu tu, nikashinda safari ya Dubai! Haikuwa ndoto, ni ukweli. Dr. Sadick alikuwa sahihi - kazi ngumu inalipa."
-          : "I sold BF Suma products for just three months and won a Dubai trip! It wasn't a dream, it's reality. Dr. Sadick was right - hard work pays.",
+          ? "Niliuza bidhaa za BF Suma kwa miezi tisa tu, nikashinda safari ya Dubai! Haikuwa ndoto, ni ukweli. Dr. Sadick alikuwa sahihi - kazi ngumu inalipa."
+          : "I sold BF Suma products for just nine months and won a Dubai trip! It wasn't a dream, it's reality. Dr. Sadick was right - hard work pays.",
       category: "safari",
     },
     {
@@ -46,8 +46,8 @@ export default function VideoTestimonialsSection() {
       title: language === "sw" ? "Safari ya Singapore" : "Singapore Trip Winner",
       comment:
         language === "sw"
-          ? "Turkey ilikuwa ndoto yangu tangu utotoni. BF Suma ilinifanya ndoto yangu ikuwa ukweli. Familia yangu na mimi tulisafiri kwa mara ya kwanza nje ya Afrika!"
-          : "Turkey was my childhood dream. BF Suma made my dream come true. My family and I traveled outside Africa for the first time!",
+          ? "Singapore ilikuwa ndoto yangu tangu utotoni. BF Suma ilinifanya ndoto yangu ikuwa ukweli. Familia yangu na mimi tulisafiri kwa mara ya kwanza nje ya Afrika!"
+          : "Singapore was my childhood dream. BF Suma made my dream come true. My family and I traveled outside Africa for the first time!",
       category: "safari",
     },
     // GARI Category
@@ -60,8 +60,8 @@ export default function VideoTestimonialsSection() {
       title: language === "sw" ? "Nilipata Gari Langu" : "I Got My Car",
       comment:
         language === "sw"
-          ? "Miezi sita tu baada ya kujiunga na timu ya Dr. Sadick, nikapewa gari hili kama zawadi ya utendaji wangu. Sasa nina gari langu mwenyewe!"
-          : "Just six months after joining Dr. Sadick's team, I was given this car as a performance reward. Now I have my own car!",
+          ? "Mwaka mmoja na miezi michache tu baada ya kujiunga na timu ya Dr. Sadick, nikapewa gari hili kama zawadi ya utendaji wangu. Sasa nina gari langu mwenyewe!"
+          : "Just one year and few months after joining Dr. Sadick's team, I was given this car as a performance reward. Now I have my own car!",
       category: "gari",
     },
     {
@@ -80,7 +80,7 @@ export default function VideoTestimonialsSection() {
     // BIASHARA Category
     {
       id: "biashara-1",
-      name: "Fatuma Hassan",
+      name: "Msamvula ",
       location: "Dodoma",
       thumbnail: "/biashara1.png?height=400&width=600&text=Business+Success+Story",
       videoUrl: "/videos/testimonials/biashara5.mp4",
@@ -93,7 +93,7 @@ export default function VideoTestimonialsSection() {
     },
     {
       id: "biashara-2",
-      name: "Mohamed Salim",
+      name: "Asma Mohammed",
       location: "Moshi",
       thumbnail: "/biashara3.png?height=400&width=600&text=Daily+Sales+Success",
       videoUrl: "/videos/testimonials/biashara6.mp4",
