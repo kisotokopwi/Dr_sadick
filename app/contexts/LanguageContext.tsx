@@ -49,8 +49,9 @@ const translations = {
     learnFromDrSadick: "Jifunze Kutoka Kwa Mr. Sadick",
 
     // CTA
-    ctaTitle: "Usikose Fursa Hii – Bonyeza Hapa Uanze Safari Yako Ya Mafanikio",
-    ctaDescription: "Jiunge na maelfu ya watu waliobadilisha maisha yao kupitia BF Suma",
+    ctaTitle: " Je uko tayari kuanza kufanya biashara hii na BF Suma ??",
+    ctaDescription: "Bonyeza Hapa Uanze Safari Yako Ya Mafanikio",
+   
     joinCounter: "Zaidi ya 200 Wamejiunga Wiki Hii!",
 
     // FAQ

@@ -11,8 +11,8 @@ export default function Footer() {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      value: "+255 714 695 406",
-      href: "https://wa.me/255714695406",
+      value: "+255 692 695 406",
+      href: "https://wa.me/255692695406",
       color: "text-emerald",
     },
     {

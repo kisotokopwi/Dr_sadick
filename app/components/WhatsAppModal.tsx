@@ -49,7 +49,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
         : `I want to join BF Suma with a capital of Tsh ${selectedAmount}, please help me get started`
 
     const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/255714695406?text=${encodedMessage}`, "_blank")
+    window.open(`https://wa.me/255692695406?text=${encodedMessage}`, "_blank")
     onClose()
   }
 

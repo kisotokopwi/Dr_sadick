@@ -26,7 +26,7 @@ export default function VideoTestimonialsSection() {
     // SAFARI Category
     {
       id: "safari-1",
-      name: "Jacob Juma",
+      name: "Joseph Ndobandola",
       location: "Mwanza",
       thumbnail: "/safari1.png?height=400&width=600&text=Dubai+Safari+Winner",
       videoUrl: "/videos/testimonials/SafariParachute.mp4",
@@ -39,7 +39,7 @@ export default function VideoTestimonialsSection() {
     },
     {
       id: "safari-2",
-      name: "Dr.Ibrahim Chenza",
+      name: "Ibrahim Chenza",
       location: "Dar es Salaam",
       thumbnail: "/images/testimonials/drChenza.jpeg",
       videoUrl: "/videos/testimonials/SafariSingapore.mp4",
@@ -82,9 +82,9 @@ export default function VideoTestimonialsSection() {
       id: "biashara-1",
       name: "Msamvula ",
       location: "Dodoma",
-      thumbnail: "/biashara1.png?height=400&width=600&text=Business+Success+Story",
+      thumbnail: "/biashara1.png?height=400&width=600&text=Msamvula+Dodoma",
       videoUrl: "/videos/testimonials/biashara5.mp4",
-      title: language === "sw" ? "Biashara Inayofaa" : "Profitable Business",
+      title: language === "sw" ? "Mauzo ya kila siku" : "Daily Sales Success",
       comment:
         language === "sw"
           ? "Kila siku nauza bidhaa za BF Suma na naingiza shilingi laki moja hadi tatu. Biashara hii imenibadilisha kutoka mfanyakazi hadi mwajiri!"
@@ -95,7 +95,7 @@ export default function VideoTestimonialsSection() {
       id: "biashara-2",
       name: "Asma Mohammed",
       location: "Moshi",
-      thumbnail: "/biashara3.png?height=400&width=600&text=Daily+Sales+Success",
+      thumbnail: "/biashara3.png?height=400&width=600&text=Asma+Moshi",
       videoUrl: "/videos/testimonials/biashara6.mp4",
       title: language === "sw" ? "Mauzo ya Kila Siku" : "Daily Sales Success",
       comment:
