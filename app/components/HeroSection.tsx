@@ -1,13 +1,20 @@
 "use client"
-import { useState } from "react"
 import { useLanguage } from "../contexts/LanguageContext"
-import { ArrowRight, MessageCircle } from "lucide-react"
+import { ArrowRight, Play } from "lucide-react"
 import { motion } from "framer-motion"
-import WhatsAppModal from "./WhatsAppModal"
 
 export default function HeroSection() {
   const { t } = useLanguage()
-  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const scrollToVideo = () => {
+    const videoSection = document.querySelector("#video-section")
+    if (videoSection) {
+      videoSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -98,11 +105,11 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setIsModalOpen(true)}
+                onClick={scrollToVideo}
                 className="bg-gold hover:bg-gold/90 text-navy font-extrabold py-5 px-10 rounded-xl text-xl transition-all duration-300 shadow-2xl hover:shadow-gold/50 flex items-center space-x-3 border-2 border-gold/50"
               >
-                <MessageCircle className="w-7 h-7" />
-                <span>{t("joinNow")}</span>
+                <Play className="w-7 h-7" />
+                <span>{t("language") === "sw" ? "Tazama Video ya Mr. Sadick" : "Watch Mr. Sadick's Video"}</span>
                 <ArrowRight className="w-7 h-7 ml-2" />
               </motion.button>
             </div>
@@ -130,9 +137,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-
-      {/* WhatsApp Modal */}
-      <WhatsAppModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   )
 }

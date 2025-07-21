@@ -16,7 +16,7 @@ interface VideoTestimonial {
   category: "safari" | "gari" | "biashara"
 }
 
-export default function VideoTestimonialsSection() {
+export default function VideoTestimonialsSection() { 
   const { t, language } = useLanguage()
   const [selectedVideo, setSelectedVideo] = useState<VideoTestimonial | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -50,13 +50,25 @@ export default function VideoTestimonialsSection() {
           : "Singapore was my childhood dream. BF Suma made my dream come true. My family and I traveled outside Africa for the first time!",
       category: "safari",
     },
+    { id: "safari-3",
+      name: "Ibrahim Chenza",
+      location: "Dar es Salaam",
+      thumbnail: "/images/testimonials/chenza.jpeg",
+      videoUrl: "/videos/testimonials/SafariSingapore2.mp4",
+      title: language === "sw" ? "Safari ya Singapore" : "Singapore Trip Winner",
+      comment:
+        language === "sw"
+          ? "Singapore ilikuwa ndoto yangu tangu utotoni. BF Suma ilinifanya ndoto yangu ikuwa ukweli. Familia yangu na mimi tulisafiri kwa mara ya kwanza nje ya Afrika!"
+          : "Singapore was my childhood dream. BF Suma made my dream come true. My family and I traveled outside Africa for the first time!",
+      category: "safari",
+    },
     // GARI Category
     {
       id: "gari-1",
       name: "Abdul Ramadhani",
       location: "Arusha",
       thumbnail: "/images/testimonials/carWinnerthumbnail1.jpeg",
-      videoUrl: "/videos/testimonials/magariWinner1.mp4",
+      videoUrl: "/videos/testimonials/suma3.mp4",
       title: language === "sw" ? "Nilipata Gari Langu" : "I Got My Car",
       comment:
         language === "sw"
@@ -66,10 +78,10 @@ export default function VideoTestimonialsSection() {
     },
     {
       id: "gari-2",
-      name: "Neema Ally",
+      name: "Kambarage Samweli",
       location: "Mbeya",
       thumbnail: "/images/testimonials/carWinnerthumbnail2.jpeg",
-      videoUrl: "/videos/testimonials/magariWinner1.mp4",
+      videoUrl: "/videos/testimonials/suma4.mp4",
       title: language === "sw" ? "Gari la Pili" : "Second Car Winner",
       comment:
         language === "sw"
@@ -77,18 +89,31 @@ export default function VideoTestimonialsSection() {
           : "This is my second car from BF Suma! First year I got the first car, second year the second car. Success keeps growing!",
       category: "gari",
     },
+    {
+      id: "gari-3",
+      name: "Msamvula",
+      location: "Dar es Salaam",
+      thumbnail: "/images/testimonials/carWinnerthumbnail3.jpeg",
+      videoUrl: "/videos/testimonials/magariWinner1.mp4",
+      title: language === "sw" ? "Gari la tatu" : "Third Car Winner",
+      comment:
+        language === "sw"
+          ? "Hii ni gari langu la ndoto zangu kutoka BF Suma! Mafanikio Juu ya Mafanikio!"
+          : "This is my dream car from BF Suma! Success keeps growing!",
+      category: "gari",
+    },
     // BIASHARA Category
     {
       id: "biashara-1",
       name: "Msamvula ",
-      location: "Dodoma",
+      location: "Dar es salaam",
       thumbnail: "/biashara1.png?height=400&width=600&text=Msamvula+Dodoma",
       videoUrl: "/videos/testimonials/biashara5.mp4",
       title: language === "sw" ? "Mauzo ya kila siku" : "Daily Sales Success",
       comment:
         language === "sw"
-          ? "Kila siku nauza bidhaa za BF Suma na naingiza shilingi laki moja hadi tatu. Biashara hii imenibadilisha kutoka mfanyakazi hadi mwajiri!"
-          : "Every day I sell BF Suma products and earn one to three lakhs. This business changed me from employee to employer!",
+          ? "Kila siku nauza bidhaa za BF Suma na naingiza shilingi milioni moja hadi tatu. Biashara hii imenibadilisha kutoka mfanyakazi hadi mwajiri!"
+          : "Every day I sell BF Suma products and earn one to three millions. This business changed me from employee to employer!",
       category: "biashara",
     },
     {
@@ -101,6 +126,19 @@ export default function VideoTestimonialsSection() {
       comment:
         language === "sw"
           ? "Sijawahi kuona biashara kama hii! Kila siku nina mauzo, kila wiki nina faida. BF Suma imekuwa chanzo changu kikuu cha kipato."
+          : "I've never seen a business like this! Every day I have sales, every week I have profit. BF Suma has become my main source of income.",
+      category: "biashara",
+    },
+    {
+      id: "biashara-3",
+      name: "Jacob Ally",
+      location: "Morogoro",
+      thumbnail: "/biashara0.png?height=400&width=600&text=Asma+Moshi",
+      videoUrl: "/videos/testimonials/mauzo.mp4",
+      title: language === "sw" ? "Mauzo ya Kila Siku" : "Daily Sales Success",
+      comment:
+        language === "sw"
+          ? "Nafurahia biashara hii ya BF Suma imekuwa chanzo kikubwa cha kipato changu."
           : "I've never seen a business like this! Every day I have sales, every week I have profit. BF Suma has become my main source of income.",
       category: "biashara",
     },
@@ -119,7 +157,7 @@ export default function VideoTestimonialsSection() {
       title: language === "sw" ? "🚗 MAGARI" : "🚗 CAR REWARDS",
       subtitle: language === "sw" ? "Washindi wa Magari" : "Car Winners",
       icon: Car,
-      color: "from-emerald-500 to-green-500",
+      color: "from-gold to-green-500",
     },
     {
       id: "biashara",

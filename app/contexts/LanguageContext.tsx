@@ -29,14 +29,14 @@ const translations = {
       "BF Suma ni kampuni ya kimataifa inayotoa bidhaa za afya na urembo. Tunatoa fursa ya biashara kwa watu wote wenye nia ya kujitegemea.",
     discountedPricing: "Ununuzi wa bidhaa kwa bei ya punguzo",
     commissionIncome: "Kipato kutokana na kamisheni",
-    partTimeStart: "Unaweza kuanza kwa muda wa ziada",
-    comprehensiveTraining: "Mafunzo ya kina kutoka kwa Mr. Sadick",
+    partTimeStart: "Unaweza kufanya kwa muda wako wa ziada",
+    comprehensiveTraining: "Usaidizi wa kutosha kutoka kwa Mr. Sadick",
 
     // Why Join
     whyJoinTitle: "Kwa Nini Ujiunge Nasi?",
     noExperience: "Hakuna uhitaji wa uzoefu mkubwa",
-    financialFreedom: "Ukombozi wa kifedha",
-    supportiveCommunity: "Kuwa sehemu ya jamii inayosaidiana",
+    financialFreedom: "Mtaji mdogo",
+    supportiveCommunity: "Kuingiza zaidi ya 1M kwa wiki moja tu",
     expertTraining: "Mafunzo ya kina kutoka kwa waliobobea",
 
     // Testimonials

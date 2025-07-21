@@ -45,7 +45,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
     const message =
       language === "sw"
-        ? `Nataka kujiunga na BF Suma nikiwa na mtaji wa Tsh ${selectedAmount}, tafadhali nisaidie kuanza`
+        ? `Niko Tayari Kuanza Biashara hii leo ya  BF Suma nikiwa na mtaji wa Tsh ${selectedAmount}, tafadhali nisaidie kuanza`
         : `I want to join BF Suma with a capital of Tsh ${selectedAmount}, please help me get started`
 
     const encodedMessage = encodeURIComponent(message)

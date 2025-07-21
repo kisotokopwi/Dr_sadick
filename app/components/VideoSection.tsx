@@ -7,7 +7,7 @@ export default function VideoSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-20 bg-warm-white">
+    <section id="video-section" className="py-20 bg-warm-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -24,7 +24,7 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto" // Increased from max-w-4xl to max-w-5xl
+          className="max-w-5xl mx-auto"
         >
           <div className="relative bg-gradient-to-br from-navy to-emerald rounded-2xl p-8 shadow-2xl">
             <div className="relative aspect-video bg-black rounded-2xl overflow-hidden group cursor-pointer">

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { useLanguage } from "../contexts/LanguageContext"
 import { Instagram, MessageCircle } from "lucide-react"
+import { SiTiktok } from "react-icons/si" // ✅ TikTok icon from react-icons
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -21,6 +22,13 @@ export default function Footer() {
       value: "@dr_sadick_msamvula",
       href: "https://instagram.com/dr_sadick_msamvula",
       color: "text-gold",
+    },
+    {
+      icon: SiTiktok, // ✅ TikTok
+      label: "TikTok",
+      value: "@dr_sadick_",
+      href: "https://www.tiktok.com/@dr_sadick_?_t=ZM-8wxjgOiV5wT&_r=1",
+      color: "text-white",
     },
   ]
 
