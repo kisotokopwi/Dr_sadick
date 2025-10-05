@@ -3,34 +3,43 @@
 import { motion } from "framer-motion"
 import { useLanguage } from "../contexts/LanguageContext"
 import { Instagram, MessageCircle } from "lucide-react"
-import { SiTiktok } from "react-icons/si" // ✅ TikTok icon from react-icons
+import { SiTiktok } from "react-icons/si"
+import type { IconType } from "react-icons"
+
+type ContactItem = {
+  icon: IconType
+  label: string
+  value: string
+  href: string
+  color: string
+}
+
+const contactInfo: ContactItem[] = [
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+255 692 695 406",
+    href: "https://wa.me/255692695406",
+    color: "text-emerald",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@dr_sadick_msamvula",
+    href: "https://instagram.com/dr_sadick_msamvula",
+    color: "text-gold",
+  },
+  {
+    icon: SiTiktok,
+    label: "TikTok",
+    value: "@dr_sadick_",
+    href: "https://www.tiktok.com/@dr_sadick_?_t=ZM-8wxjgOiV5wT&_r=1",
+    color: "text-white",
+  },
+]
 
 export default function Footer() {
   const { t } = useLanguage()
-
-  const contactInfo = [
-    {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      value: "+255 692 695 406",
-      href: "https://wa.me/255692695406",
-      color: "text-emerald",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      value: "@dr_sadick_msamvula",
-      href: "https://instagram.com/dr_sadick_msamvula",
-      color: "text-gold",
-    },
-    {
-      icon: SiTiktok, // ✅ TikTok
-      label: "TikTok",
-      value: "@dr_sadick_",
-      href: "https://www.tiktok.com/@dr_sadick_?_t=ZM-8wxjgOiV5wT&_r=1",
-      color: "text-white",
-    },
-  ]
 
   return (
     <footer className="bg-navy text-white py-16">
@@ -59,19 +68,22 @@ export default function Footer() {
           >
             <h4 className="text-lg font-semibold text-gold mb-4">{t("contact")}</h4>
             <div className="space-y-3">
-              {contactInfo.map((contact, index) => (
-                <motion.a
-                  key={index}
-                  href={contact.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-3 hover:text-gold transition-colors"
-                >
-                  <contact.icon className={`w-5 h-5 ${contact.color}`} />
-                  <span className="text-white/90">{contact.value}</span>
-                </motion.a>
-              ))}
+              {contactInfo.map((contact, index) => {
+                const IconComponent = contact.icon as React.ElementType
+                return (
+                  <motion.a
+                    key={index}
+                    href={contact.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    className="flex items-center space-x-3 hover:text-gold transition-colors"
+                  >
+                    <IconComponent className={`w-5 h-5 ${contact.color}`} />
+                    <span className="text-white/90">{contact.value}</span>
+                  </motion.a>
+                )
+              })}
             </div>
           </motion.div>
 
@@ -84,19 +96,22 @@ export default function Footer() {
           >
             <h4 className="text-lg font-semibold text-gold mb-4">{t("followUs")}</h4>
             <div className="flex space-x-4">
-              {contactInfo.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-12 h-12 bg-emerald hover:bg-gold rounded-2xl flex items-center justify-center transition-colors duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-6 h-6 text-white" />
-                </motion.a>
-              ))}
+              {contactInfo.map((social, index) => {
+                const IconComponent = social.icon as React.ElementType
+                return (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className="w-12 h-12 bg-emerald hover:bg-gold rounded-2xl flex items-center justify-center transition-colors duration-300"
+                    aria-label={social.label}
+                  >
+                    <IconComponent className="w-6 h-6 text-white" />
+                  </motion.a>
+                )
+              })}
             </div>
           </motion.div>
         </div>
