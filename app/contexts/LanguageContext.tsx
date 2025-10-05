@@ -20,7 +20,7 @@ const translations = {
     joinNow: "Jiunge Sasa",
 
     // Video Section
-    videoTitle: "Tazama Mr. Sadick Akielezea Fursa ya BF Suma",
+    videoTitle: "Tazama video ikielezea fursa ya BF Suma",
     videoDescription: "Jifunze jinsi unavyoweza kubadilisha maisha yako kupitia biashara hii ya BF Suma",
 
     // About Section

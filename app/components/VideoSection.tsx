@@ -68,10 +68,6 @@ export default function VideoSection() {
                     ></iframe>
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-white/10 opacity-70 transition-opacity duration-500 group-hover:opacity-40"></div>
-                  <div className="absolute bottom-6 right-6 flex items-center gap-3 rounded-full bg-white/90 px-5 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-emerald shadow-lg">
-                    <div className="h-2 w-2 rounded-full bg-emerald"></div>
-                    {language === "sw" ? "Angalia sasa" : "Tap to watch"}
-                  </div>
                 </div>
               </div>
 
