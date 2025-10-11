@@ -649,11 +649,9 @@ const SidebarMenuSkeleton = React.forwardRef<
   React.ComponentProps<"div"> & {
     showIcon?: boolean
   }
->(({ className, showIcon = false, ...props }, ref) => {
-  // Random width between 50 to 90%.
-  const width = React.useMemo(() => {
-    return `${Math.floor(Math.random() * 40) + 50}%`
-  }, [])
+>({ className, showIcon = false, ...props }, ref) => {
+  // Deterministic width to avoid hydration mismatch between SSR and CSR
+  const width = "70%"
 
   return (
     <div

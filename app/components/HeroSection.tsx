@@ -2,9 +2,43 @@
 import { useLanguage } from "../contexts/LanguageContext"
 import { ArrowRight, Play } from "lucide-react"
 import { motion } from "framer-motion"
+import { useMemo } from "react"
+
+// Deterministic PRNG to avoid SSR/CSR mismatches
+function mulberry32(a: number) {
+  return function () {
+    let t = (a += 0x6d2b79f5)
+    t = Math.imul(t ^ (t >>> 15), t | 1)
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61)
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+type Dot = {
+  left: number
+  top: number
+  dx: number
+  dy: number
+  duration: number
+  delay: number
+}
 
 export default function HeroSection() {
   const { t } = useLanguage()
+
+  // Precompute stable positions/animation seeds for dots (SSR == CSR)
+  const dots: Dot[] = useMemo(() => {
+    return Array.from({ length: 15 }, (_, i) => {
+      const r = mulberry32(12345 + i * 9973)
+      const left = r() * 100
+      const top = r() * 100
+      const dx = r() * 200 - 100
+      const dy = r() * 200 - 100
+      const duration = 6 + r() * 4
+      const delay = i * 0.3
+      return { left, top, dx, dy, duration, delay }
+    })
+  }, [])
 
   const scrollToVideo = () => {
     const videoSection = document.querySelector("#video-section")
@@ -21,28 +55,28 @@ export default function HeroSection() {
       {/* Gradient background - similar to CTA section */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-emerald"></div>
 
-      {/* Animated dots background */}
+      {/* Animated dots background (deterministic to avoid hydration mismatches) */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
+        {dots.map((d: Dot, i: number) => (
           <motion.div
             key={`hero-dot-${i}`}
             className="absolute w-2 h-2 bg-gold rounded-full"
             initial={{ opacity: 0, scale: 0 }}
             animate={{
-              x: [0, Math.random() * 200 - 100, 0],
-              y: [0, Math.random() * 200 - 100, 0],
+              x: [0, d.dx, 0],
+              y: [0, d.dy, 0],
               opacity: [0.2, 0.8, 0.2],
               scale: [0.5, 1.5, 0.5],
             }}
             transition={{
-              duration: 6 + Math.random() * 4,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: i * 0.3,
+              duration: d.duration,
+              repeat: Infinity,
+              delay: d.delay,
               ease: "easeInOut",
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${d.left}%`,
+              top: `${d.top}%`,
             }}
           />
         ))}

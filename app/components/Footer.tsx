@@ -125,7 +125,9 @@ export default function Footer() {
           className="border-t border-white/20 pt-8 text-center"
         >
           <p className="text-white/70 text-sm mb-4">{t("footerDisclaimer")}</p>
-          <p className="text-white/50 text-xs">© {new Date().getFullYear()} BF Suma Tanzania. All rights reserved.</p>
+          <p className="text-white/50 text-xs">
+            © <span suppressHydrationWarning>{new Date().getFullYear()}</span> BF Suma Tanzania. All rights reserved.
+          </p>
         </motion.div>
       </div>
     </footer>
