@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ClientGuard } from '@/components/client-guard'
 
 export const metadata = {
   title: "BF Suma Tanzania | Win With Sadick",
@@ -33,7 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ClientGuard>
+          {children}
+        </ClientGuard>
+      </body>
     </html>
   )
 }
